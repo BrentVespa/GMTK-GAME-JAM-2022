@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NumberRolled : MonoBehaviour
+public class NumberRolled : WorldManager
 {
     public GameObject[] sides;
 
@@ -10,6 +10,7 @@ public class NumberRolled : MonoBehaviour
     Rigidbody body;
     string name;
     GameObject low;
+    public int? value = null;
     float smallestDist = Mathf.Infinity; //starting distance, everything is smaller than infinity
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class NumberRolled : MonoBehaviour
         //sides = this.GetComponentInChildren();
     }
 
-    public void Roll()
+    public int? Roll()
     {
         float y = body.velocity.y;
         float x = body.velocity.x;
@@ -50,9 +51,15 @@ public class NumberRolled : MonoBehaviour
             }
         }
 
-        Debug.Log("Dice: " + name + " TopSide is: " + low);
+        value = low.GetComponentInChildren<SideName>().side;
+        Debug.Log("Dice: " + name + " TopSide is: " + low + "Value: " + value);
+
+
         isFired = true;
+
+        return value;
     }
+
 
     // Update is called once per frame
     void Update()

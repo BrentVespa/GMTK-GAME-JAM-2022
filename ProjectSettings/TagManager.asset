@@ -7,6 +7,9 @@ TagManager:
   - D8 Side
   - Dice
   - D6 Side
+  - PlayerUnit
+  - Ground
+  - NotGround
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
