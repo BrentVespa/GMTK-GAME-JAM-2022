@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LogsScript : MonoBehaviour, ICollectable {
 
-    public GameObject Player;
+    public PlayerManager Player;
 
     void Update()
     {

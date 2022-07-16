@@ -5,6 +5,7 @@ using UnityEngine;
 public class RocksScript : MonoBehaviour, ICollectable {
 
     public PlayerManager Player;
+    
 
    void Update()
     {
@@ -16,8 +17,11 @@ public class RocksScript : MonoBehaviour, ICollectable {
 
     public void Collect()
     {
+        Wallet wallet = this.Player.wallet;
+        ResourceTypes.Resource resource = ResourceTypes.Resource.Rock;
         Debug.Log("Collected Rocks");
-        Debug.Log(this.Player.getWallet().getResource(ResourceTypes.Resource.Rock));
+        wallet.addResource(resource);
+        wallet.getResource(resource);
         Destroy(this.gameObject);
 
         //player.addRock(10);
