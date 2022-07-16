@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogsScript : MonoBehaviour, ICollectable
-{
+public class LogsScript : MonoBehaviour, ICollectable {
+
+    public GameObject Player;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
