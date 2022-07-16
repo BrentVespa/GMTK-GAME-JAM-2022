@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocksScript : MonoBehaviour, ICollectable
-{  
+public class RocksScript : MonoBehaviour, ICollectable {
+
+    public PlayerManager Player;
+
    void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))
@@ -15,6 +17,7 @@ public class RocksScript : MonoBehaviour, ICollectable
     public void Collect()
     {
         Debug.Log("Collected Rocks");
+        Debug.Log(this.Player.getWallet().getResource(ResourceTypes.Resource.Rock));
         Destroy(this.gameObject);
 
         //player.addRock(10);
