@@ -609,6 +609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8bb8825d27140a0029115534134f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4348498460797931213, guid: 9d2f164c3735a5d478609f85c4f26d44, type: 3}
+  Dice: {fileID: 6693747625456836315}
+  WorldEventValue: 0
   sides:
   - {fileID: 5775182427477386972}
   - {fileID: 5775182426809201048}
@@ -618,3 +621,5 @@ MonoBehaviour:
   - {fileID: 5775182426181424467}
   - {fileID: 5775182427881271270}
   - {fileID: 5775182427728092263}
+  WorldManagerPrefab: {fileID: 6097369406377868123, guid: ebf2c72eb9f563c44abb447bab8c9619, type: 3}
+  value: 0

@@ -6,11 +6,12 @@ public class NumberRolled : WorldManager
 {
     public GameObject[] sides;
 
-    bool isFired = false;
+    public GameObject WorldEventManager;
+
     Rigidbody body;
     string name;
     GameObject low;
-    public int? value = null;
+    public int value;
     float smallestDist = Mathf.Infinity; //starting distance, everything is smaller than infinity
 
     // Start is called before the first frame update
@@ -24,10 +25,10 @@ public class NumberRolled : WorldManager
         }
 
         body = GetComponent<Rigidbody>();
-        //sides = this.GetComponentInChildren();
+
     }
 
-    public int? Roll()
+    public int Roll()
     {
         float y = body.velocity.y;
         float x = body.velocity.x;
@@ -43,7 +44,6 @@ public class NumberRolled : WorldManager
                 smallestDist = toTop;
                 low = s;
                 name = this.gameObject.name;
-                //Debug.Log("Side: " + s + " Top Point: " + UpPoint +"  Distance to Top: " + toTop + "  LowDist: " + smallestDist + "Current low: " + low);
             }
             else
             {
@@ -54,17 +54,16 @@ public class NumberRolled : WorldManager
         value = low.GetComponentInChildren<SideName>().side;
         Debug.Log("Dice: " + name + " TopSide is: " + low + "Value: " + value);
 
+        WorldEventManager.GetComponent<WorldManager>().WorldEventValue = value;
 
-        isFired = true;
-
-        return value;
+        return WorldEventValue;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if((body.velocity.x == 0 && body.velocity.y == 0) && !isFired)
+        if((body.velocity.x == 0 && body.velocity.y == 0))
         {
         Roll();
         }
