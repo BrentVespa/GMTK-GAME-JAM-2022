@@ -7,9 +7,10 @@ TagManager:
   - D8 Side
   - Dice
   - D6 Side
-  - PlayerUnit
   - Ground
   - NotGround
+  - UnitOne
+  - UnitTwo
   layers:
   - Default
   - TransparentFX

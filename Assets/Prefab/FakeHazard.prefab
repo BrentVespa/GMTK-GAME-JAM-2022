@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6868487497225050719}
   - component: {fileID: 6868487497225050718}
   m_Layer: 0
-  m_Name: ground
-  m_TagString: Ground
+  m_Name: FakeHazard
+  m_TagString: NotGround
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 4
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6868487497225050717
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e50f989a1ae3ed54180cab7a2ae14088, type: 2}
+  - {fileID: 2100000, guid: c896ac730c6a5924cbce6d898a9a8e12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
