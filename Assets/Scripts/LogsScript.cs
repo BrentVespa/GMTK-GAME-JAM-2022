@@ -16,7 +16,11 @@ public class LogsScript : MonoBehaviour, ICollectable {
 
     public void Collect()
     {
+        Wallet wallet = this.Player.wallet;
+        ResourceTypes.Resource resource = ResourceTypes.Resource.Wood;
         Debug.Log("Collected Logs");
+        wallet.addResource(resource);
+        wallet.getResource(resource);
         Destroy(this.gameObject);
     }
 }
