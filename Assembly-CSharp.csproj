@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\RocksScript.cs" />
     <Compile Include="Assets\Scripts\Wallet.cs" />
     <Compile Include="Assets\Scripts\MoveUnit.cs" />
+    <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\Scripts\WorldManager.cs" />
     <Compile Include="Assets\Scripts\ICollectable.cs" />
     <Compile Include="Assets\Scripts\NumberRolled.cs" />
@@ -67,7 +68,6 @@
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SideName.cs" />
-    <Compile Include="Assets\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

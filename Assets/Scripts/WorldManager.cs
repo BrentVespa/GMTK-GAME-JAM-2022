@@ -3,44 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldManager : MonoBehaviour
-{
+{    
+    public GameObject player;
+    public GameObject Dice;
+    
+    public int WorldEventValue = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        //Invoke("spawnDice", 1);
+        //Invoke("DestroyDie", 20);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Invoke("DestroyDie", 120);
+        //Invoke("spawnDice", 120);
     }
-
-
-    
-    //private int? spawnDice()
+    //public void spawnDice()
     //{
-    //    if (DiceDroped == false)
-    //    {
-    //        GameObject Die = Instantiate(D8Prefab) as GameObject;
-    //        Die.transform.position = DiceBox.transform.position + (Vector3.up * 5);
-    //        DiceDroped = true;
-    //    }
-    //    value = D8Prefab.GetComponentInChildren<SideName>().side;
-    //    Debug.Log(value);
-
-    //    if (value != null && isCoroutineExecuting) {
-    //        DiceDroped = false;
-    //        Debug.Log(value);
-    //        state = ActionState.PROCESS;
-    //        return value;
-    //    }
-    //    return null;
+    //        GameObject Die = Instantiate(Dice) as GameObject;
+    //        Die.transform.position = player.transform.position + new Vector3(Random.Range(1, 5), 0, Random.Range(1, 5));
+    //        Invoke("WaitForIt", 2);
     //}
 
-    private void MoveRadius()
-    {
-        //renderer.material.color = Color.red;
-    }
+    //public void DestroyDie()
+    //{
+    //    DestroyImmediate(Dice, true);
+    //}
+
+    //public int WaitForIt()
+    //{
+    //    WorldEventValue = Dice.GetComponent<NumberRolled>().value;
+    //    return WorldEventValue;
+    //}
 }

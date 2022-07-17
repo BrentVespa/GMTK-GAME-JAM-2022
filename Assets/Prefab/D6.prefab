@@ -384,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 1897099292300460082}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 10.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1626556000788374220}
@@ -489,4 +489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8bb8825d27140a0029115534134f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4348498460797931213, guid: 9d2f164c3735a5d478609f85c4f26d44, type: 3}
+  Dice: {fileID: 1897099292300460082}
+  WorldEventValue: 0
   sides: []
+  WorldEventManager: {fileID: 6097369406377868123, guid: ebf2c72eb9f563c44abb447bab8c9619, type: 3}
+  value: 0

@@ -11,9 +11,9 @@ public class CameraController : MonoBehaviour
     [Range(-20.0f, 20.0f)]
     public float xVector;
     [Range(-20.0f, 20.0f)]
-    public float yVector;   
+    public float yVector = 20f;   
     [Range(-20.0f, 20.0f)]
-    public float zVector;
+    public float zVector = -20f;
 
     // Update is called once per frame
     void Update()
