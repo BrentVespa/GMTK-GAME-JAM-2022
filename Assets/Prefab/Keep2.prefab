@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 1224924207343143994}
   - component: {fileID: 3970830557136812272}
   - component: {fileID: 8069934013697420655}
+  - component: {fileID: 8048018053117807131}
   m_Layer: 0
   m_Name: Keep2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2832787834534364063
 Transform:
@@ -98,3 +99,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keep: {fileID: 2753813851467565261, guid: 554beaf992b38d64a81c5d6bebee5f4e, type: 3}
   Player: {fileID: 5240230644945235350, guid: 288abe311b252af429005d5b4ac1730c, type: 3}
+--- !u!208 &8048018053117807131
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3178350747356518693}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.013, y: 0.013, z: 0.017}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.001, y: 0, z: 0.007}
+  m_TimeToStationary: 0.5

@@ -45,7 +45,7 @@ public class Wallet {
 	}
 
 	public int getResource(ResourceTypes.Resource type) {
-		Debug.Log(getResourceType(type) + " " + this.wallet[(int)type]);
+		//Debug.Log(getResourceType(type) + " " + this.wallet[(int)type]);
 		return this.wallet[(int)type];
 	}
 

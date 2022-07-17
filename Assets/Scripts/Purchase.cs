@@ -7,10 +7,14 @@ public class Purchase : MonoBehaviour {
     public BankManager Keep;
     public PlayerManager Player;
 
+    public GameObject playerPrefab;
+    public GameObject KeepLocation;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerPrefab = GameObject.FindGameObjectWithTag("UnitOne");
+        KeepLocation = GameObject.FindGameObjectWithTag("Keep");
     }
 
     // Update is called once per frame
@@ -19,10 +23,12 @@ public class Purchase : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E)) {
             purchaseUpgrade();
         }
-        else if (Input.GetKeyDown(KeyCode.Q)) {
+        else if (Input.GetKeyDown(KeyCode.Q) && (Vector3.Distance(KeepLocation.transform.position, playerPrefab.transform.position) < 10f))
+        {
+            //Debug.Log("Dropped Items");
             depositWallet();
 		}
-        else if (Input.GetKeyDown(KeyCode.W)) {
+        else if (Input.GetKeyDown(KeyCode.RightBracket)) {
             Player.wallet.addResource(ResourceTypes.Resource.Rock, 25);
             Player.wallet.addResource(ResourceTypes.Resource.Wood, 25);
             Keep.bank.addResource(ResourceTypes.Resource.Rock, 250);
@@ -42,17 +48,17 @@ public class Purchase : MonoBehaviour {
             costs[i] = 25 + (35 * wallet.getWalletTier());
             ResourceTypes.Resource currentResource = (ResourceTypes.Resource)System.Enum.ToObject(typeof(ResourceTypes.Resource), i);
             
-            Debug.Log(currentResource); //++++++++++
+            //Debug.Log(currentResource); //++++++++++
 
             
             types[i] = currentResource;
 
-            Debug.Log(bank.getResource(currentResource) + " number of " + currentResource); //
+            //Debug.Log(bank.getResource(currentResource) + " number of " + currentResource); //
         }
 
         if (bank.validatePurchase(types, costs)) {
             wallet.increaseWalletTier();
-            Debug.Log("Wallet Bought");
+            //Debug.Log("Wallet Bought");
 		}
 
 	}
@@ -60,15 +66,15 @@ public class Purchase : MonoBehaviour {
         Bank bank = this.Keep.bank;
         Wallet wallet = this.Player.wallet;
 
-        for (int i = 0; i < sizeof(ResourceTypes.Resource); i++) {
+        for (int i = 0; i < 2; i++) {
             ResourceTypes.Resource currentResource = (ResourceTypes.Resource)System.Enum.ToObject(typeof(ResourceTypes.Resource), i);
 
-            Debug.Log(bank.getResource(currentResource) + " " + currentResource); //
+            Debug.Log("Before Resources in Bank " + bank.getResource(currentResource) + "Balance " + currentResource); //
 
             bank.addResource(currentResource, wallet.getResource(currentResource));
             wallet.clearResource(currentResource);
 
-            Debug.Log(bank.getResource(currentResource) + " " + currentResource); //
+            Debug.Log("After Resources in Bank " + bank.getResource(currentResource) + "Balance " + currentResource); //
 		}
 	}
 }
