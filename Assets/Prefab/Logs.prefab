@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7160408771476039733}
   - component: {fileID: 4952295612343868671}
   - component: {fileID: -5710255268042248109}
+  - component: {fileID: 4491996746880927814}
+  - component: {fileID: 3144157519230366828}
   m_Layer: 0
   m_Name: Logs
   m_TagString: Log
@@ -96,7 +98,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedac30ca2854a44b9dd553eb5488fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  d8: {fileID: 6693747625456836315, guid: 0608b166b12a65d4ea8779736444e2d1, type: 3}
   Player: {fileID: 5240230644945235350, guid: 288abe311b252af429005d5b4ac1730c, type: 3}
   TopHat: {fileID: 4348498460797931213, guid: 9d2f164c3735a5d478609f85c4f26d44, type: 3}
   audioFile: {fileID: 8300000, guid: 56988cbd47cad5647aaffaa8b57b6094, type: 3}
+  KillFloor: {fileID: 0}
   dist: 6
+--- !u!54 &4491996746880927814
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6898084090597408042}
+  serializedVersion: 2
+  m_Mass: 20
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &3144157519230366828
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6898084090597408042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7387706064836869012, guid: 2d2daaf2e0cabcf41a3c53da2cbb750c, type: 3}

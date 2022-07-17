@@ -13,6 +13,8 @@ TagManager:
   - UnitTwo
   - Log
   - Rock
+  - KillFloor
+  - Keep
   layers:
   - Default
   - TransparentFX

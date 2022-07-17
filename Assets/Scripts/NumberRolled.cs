@@ -28,7 +28,7 @@ public class NumberRolled : WorldManager
 
     }
 
-    public int Roll()
+    public void Roll()
     {
         float y = body.velocity.y;
         float x = body.velocity.x;
@@ -54,9 +54,7 @@ public class NumberRolled : WorldManager
         value = low.GetComponentInChildren<SideName>().side;
         Debug.Log("Dice: " + name + " TopSide is: " + low + "Value: " + value);
 
-        WorldEventManager.GetComponent<WorldManager>().WorldEventValue = value;
-
-        return WorldEventValue;
+        return;
     }
 
 

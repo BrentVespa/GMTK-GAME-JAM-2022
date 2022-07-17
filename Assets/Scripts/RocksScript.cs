@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RocksScript : MonoBehaviour, ICollectable {
 
+    public GameObject d8;
     public PlayerManager Player;
     public GameObject TopHat;
 
@@ -25,11 +26,10 @@ public class RocksScript : MonoBehaviour, ICollectable {
     {
         if((Input.GetKeyDown(KeyCode.LeftControl) && Vector3.Distance(this.gameObject.transform.position, TopHat.transform.position) < dist))
         {
-            Debug.Log("Got Into Rock Collect");
+            //Debug.Log("Got Into Rock Collect");
             //this.GetComponent<AudioSource>().Play();
             AudioSource.PlayClipAtPoint(audioFile, transform.position);
-            Collect();
-            
+            Collect();   
         }
     }
 
@@ -42,7 +42,14 @@ public class RocksScript : MonoBehaviour, ICollectable {
         wallet.addResource(resource);
         //wallet.getResource(resource);
 
+        Instantiate(d8, this.transform.position + (Vector3.up * 2), Quaternion.identity);
+
         //Remove this object from the scene
+        Kill();
+    }
+
+    public void Kill()
+    {
         Destroy(this.gameObject);
     }
 }
