@@ -7,11 +7,6 @@ public class PlayerManager : MonoBehaviour {
 
     public Wallet wallet = new Wallet();
 
-    /*public Wallet getWallet() {
-        Debug.Log("Run Get Wallet");
-        return this.wallet;
-	}*/
-
     void Start()
     {
         
