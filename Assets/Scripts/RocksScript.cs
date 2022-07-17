@@ -1,17 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RocksScript : MonoBehaviour, ICollectable {
 
     public PlayerManager Player;
-    
+    public GameObject TopHat;
 
-   void Update()
+
+    public AudioClip audioFile;
+
+    [Header("Grab Dist")]
+    [Range(0f, 20.0f)]
+    public float dist;
+
+
+    void Start()
     {
-        if(Input.GetKeyDown(KeyCode.LeftControl))
+        TopHat = GameObject.FindGameObjectWithTag("UnitOne");
+    }
+
+    void Update()
+    {
+        if((Input.GetKeyDown(KeyCode.LeftControl) && Vector3.Distance(this.gameObject.transform.position, TopHat.transform.position) < dist))
         {
+            Debug.Log("Got Into Rock Collect");
+            //this.GetComponent<AudioSource>().Play();
+            AudioSource.PlayClipAtPoint(audioFile, transform.position);
             Collect();
+            
         }
     }
 

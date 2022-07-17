@@ -11,6 +11,8 @@ TagManager:
   - NotGround
   - UnitOne
   - UnitTwo
+  - Log
+  - Rock
   layers:
   - Default
   - TransparentFX

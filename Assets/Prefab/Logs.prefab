@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -5710255268042248109}
   m_Layer: 0
   m_Name: Logs
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6120737425064241040
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6898084090597408042}
   m_LocalRotation: {x: 0.7062534, y: 0.707335, z: -0.02088736, w: -0.021144198}
   m_LocalPosition: {x: 0.14209747, y: 0.0000637224, z: -10.257567}
-  m_LocalScale: {x: 99.99998, y: 100, z: 99.99998}
+  m_LocalScale: {x: 50, y: 100, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,4 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedac30ca2854a44b9dd553eb5488fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 6024548394035212601, guid: 288abe311b252af429005d5b4ac1730c, type: 3}
+  Player: {fileID: 5240230644945235350, guid: 288abe311b252af429005d5b4ac1730c, type: 3}
+  TopHat: {fileID: 4348498460797931213, guid: 9d2f164c3735a5d478609f85c4f26d44, type: 3}
+  audioFile: {fileID: 8300000, guid: 56988cbd47cad5647aaffaa8b57b6094, type: 3}
+  dist: 6
