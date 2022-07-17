@@ -34,10 +34,11 @@ public class Purchase : MonoBehaviour {
     public void purchaseUpgrade() {
         Bank bank = this.Keep.bank;
         Wallet wallet = this.Player.wallet;
-        int[] costs = new int[sizeof(ResourceTypes.Resource)];
-        ResourceTypes.Resource[] types = new ResourceTypes.Resource[sizeof(ResourceTypes.Resource)];
+        int numberOfElements = 2;
+        int[] costs = new int[numberOfElements];
+        ResourceTypes.Resource[] types = new ResourceTypes.Resource[numberOfElements];
 
-        for (int i = 0; i < sizeof(ResourceTypes.Resource); i++) {
+        for (int i = 0; i < numberOfElements; i++) {
             costs[i] = 25 + (35 * wallet.getWalletTier());
             ResourceTypes.Resource currentResource = (ResourceTypes.Resource)System.Enum.ToObject(typeof(ResourceTypes.Resource), i);
             
