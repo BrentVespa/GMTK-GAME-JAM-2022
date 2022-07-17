@@ -6,13 +6,17 @@ public class MoveUnit : MonoBehaviour
 {
     GameObject[] agentsOne;
     GameObject[] agentsTwo;
+    //public AudioSource Walk1;
+    //public AudioSource Walk2;
+    //AudioSource Walk3;
 
     private Renderer renderer;
     private void Start()
     {
+        //Walk1.Pause();
         renderer = GetComponent<Renderer>();
         agentsOne = GameObject.FindGameObjectsWithTag("UnitOne");
-        agentsTwo = GameObject.FindGameObjectsWithTag("UnitTwo");
+        //agentsTwo = GameObject.FindGameObjectsWithTag("UnitTwo");
     }
     void Update()
     {
@@ -24,12 +28,14 @@ public class MoveUnit : MonoBehaviour
             {
                 foreach (GameObject a in agentsOne)
                 {
-                    {
-                        a.GetComponent<PlayerController>().agent.SetDestination(hit.point);
-                    }
+                    a.GetComponent<PlayerController>().agent.SetDestination(hit.point);
+
                 }
             }
+
         }
+
+        
 
         if (Input.GetMouseButtonDown(1) && this.transform.tag == "UnitTwo")
         {
