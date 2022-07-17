@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\ResourceTypes.cs" />
     <Compile Include="Assets\Scripts\LogsScript.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
+
     <Compile Include="Assets\Scripts\SideName.cs" />
   </ItemGroup>
   <ItemGroup>
